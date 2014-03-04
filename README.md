@@ -37,7 +37,7 @@ the server needs to be configured to use them.
 ### resource openvpn::config::client
 
 Generates a client key pair. This key pair can be copied to a client so it can
-connect to the vpn server. After the kyes have been copied to the client, the
+connect to the vpn server. After the keys have been copied to the client, the
 private one can be deleted from the server.
 
 Examples
