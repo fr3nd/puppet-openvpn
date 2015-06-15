@@ -139,7 +139,7 @@ server-bridge <%= @server_bridge_ip %> <%= @server_bridge_netmask %> <%= @server
 # back to the OpenVPN server.
 ;push "route 192.168.10.0 255.255.255.0"
 ;push "route 192.168.20.0 255.255.255.0"
-<% push.each do |p| -%>
+<% @push.each do |p| -%>
 push "<%= p %>"
 <% end -%>
 
@@ -208,7 +208,7 @@ push "<%= p %>"
 # To force clients to only see the server, you
 # will also need to appropriately firewall the
 # server's TUN/TAP interface.
-<% if client_to_client -%>
+<% if @client_to_client -%>
 client-to-client
 <% end -%>
 
