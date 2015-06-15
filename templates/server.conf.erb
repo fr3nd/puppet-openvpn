@@ -114,7 +114,7 @@ ifconfig-pool-persist <%= @ifconfig_pool_persist %>
 # (start=10.8.0.50 end=10.8.0.100) to allocate
 # to connecting clients.  Leave this line commented
 # out unless you are ethernet bridging.
-<% if dev == 'tap' -%>
+<% if @dev == 'tap' -%>
 server-bridge <%= @server_bridge_ip %> <%= @server_bridge_netmask %> <%= @server_bridge_subnet_start %> <%= @server_bridge_subnet_end %>
 <% end -%>
 
